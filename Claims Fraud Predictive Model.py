@@ -112,8 +112,3 @@ for test, clf in model.items():
     print('*' * 55,'')
     model_accuracy = pd.concat([model_accuracy, pd.DataFrame({'Model': test, 'Accuracy': round(acc, 3), 'Train_acc': round(train_acc, 3)}, index=[0])], ignore_index=True)
 
-
-for test, clf in model.items():
-    clf.fit(x,y)
-    y_probas = clf.predict_proba(x1)
-    kds.metrics.plot_cumulative_gain(y1, y_probas[:,-1], title='Cumulative Gain Chart for Class 1', title_fontsize=14)
