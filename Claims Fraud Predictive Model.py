@@ -44,7 +44,7 @@ plt.figure(figsize=(20,20))
 heatmap = sns.heatmap(df.corr(), vmin=-1, vmax=1, annot=True)
 heatmap.set_title('Correlation Heatmap', fontdict={'fontsize':12})
 
-# plt.show()
+plt.show()
 
 corr_matrix = df.corr().abs()
 corr = corr_matrix['FraudFound_P']
