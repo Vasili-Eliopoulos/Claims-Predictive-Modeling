@@ -1,26 +1,25 @@
 from tkinter import *
 from tkinter.filedialog import *
 
-import requests
+# import requests
 import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 import sklearn as sk
-import kds
 
-from sklearn.multiclass import OneVsRestClassifier
-from sklearn.svm import LinearSVC
-from sklearn.multiclass import OneVsOneClassifier
+# from sklearn.multiclass import OneVsRestClassifier
+# from sklearn.svm import LinearSVC
+# from sklearn.multiclass import OneVsOneClassifier
 from xgboost import XGBClassifier
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.ensemble import RandomForestClassifier
+# from sklearn.ensemble import GradientBoostingClassifier
+# from sklearn.ensemble import RandomForestClassifier
 from sklearn.utils import resample
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import classification_report
-from mlxtend.plotting import plot_confusion_matrix
-from sklearn.preprocessing import LabelBinarizer
+# from mlxtend.plotting import plot_confusion_matrix
+# from sklearn.preprocessing import LabelBinarizer
 from sklearn.metrics import accuracy_score,confusion_matrix,roc_auc_score,ConfusionMatrixDisplay
 from sklearn.model_selection import train_test_split
 
@@ -63,7 +62,7 @@ for column in dropLst:
 sns.countplot(x = 'FraudFound_P', data = df)
 
 #The distribution is highly unbalanced 
-print(df.FraudFound_P.value_counts())
+print(df.FraudFound_P.value_counts()) 
 
 #Randomly oversamples the specified classes to balance the three classes
 train, test = train_test_split(df, random_state = 123, test_size = 0.4)
